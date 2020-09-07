@@ -9,7 +9,7 @@ export const Container = styled.div`
 `;
 
 export const GithubLogo = styled(FaGithub)`
-  color: var(--logo);
+  fill: var(--logo);
   width: 32px;
   height: 32px;
   /* fixando imagem */
