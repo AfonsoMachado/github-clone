@@ -15,7 +15,7 @@ const Profile: React.FC = () => {
             avatarUrl={'https://avatars2.githubusercontent.com/u/11397955?v=4'}
             followers={15}
             following={32}
-            company={' '}
+            company={undefined}
             location={'Feira de Santana, Bahia, Brazil'}
             email={'afonsosmachado@gmail.com'}
             blog={'https://www.linkedin.com/in/afonsomachado/'}
