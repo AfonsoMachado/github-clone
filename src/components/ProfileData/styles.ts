@@ -29,11 +29,28 @@ export const Flex = styled.div`
       font-weight: 300;
     }
   }
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    /* colocando os dados para a esquerda em desktop */
+    align-items: flex-start;
+
+    > div {
+      /* ajuste à esquerda do texto do username em desktop */
+      margin-left: 0;
+      margin-top: 16px;
+    }
+  }
 `;
 
 export const Avatar = styled.img`
   width: 16%;
   border-radius: 50%;
+
+  /* ajuste no avatar para desktop */
+  @media (min-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const Row = styled.ul`
