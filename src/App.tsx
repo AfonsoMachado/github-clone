@@ -11,7 +11,6 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <h1>GitHub</h1>
       <Routes>
         {/* Rotas da aplicação */}
         <Route path="/" element={<Profile />} />
