@@ -2,7 +2,14 @@ import styled, { css } from 'styled-components';
 import { RiBookMarkLine, RiStarLine } from 'react-icons/ri';
 import { AiOutlineFork } from 'react-icons/ai';
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+`;
 
 export const Topside = styled.div``;
 
