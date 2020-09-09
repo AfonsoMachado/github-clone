@@ -21,12 +21,16 @@ export const Main = styled.div`
 `;
 
 export const LeftSide = styled.div`
+  padding: 0 var(--horizontalPadding);
+
   @media (min-width: 768px) {
     width: 25%;
   }
 `;
 
 export const RightSide = styled.div`
+  padding: 0 var(--horizontalPadding);
+
   @media (min-width: 768px) {
     width: 75%;
   }
