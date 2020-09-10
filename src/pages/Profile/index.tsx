@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   Container,
@@ -16,9 +16,19 @@ import RepoCard from '../../components/RepoCard';
 import RandomCalendar from '../../components/RandomCalendar';
 import { useParams } from 'react-router-dom';
 
+import { APIUser, APIRepo } from '../../@types';
+
+// Dados para exbir na aplicação
+interface Data {
+  user?: APIUser;
+  repos?: APIRepo[];
+  error?: string;
+}
+
 const Profile: React.FC = () => {
   // , capturando o username, sendo afonsomachado padrão
   const { username = 'AfonsoMachado' } = useParams();
+  const [data, setData] = useState<Data>();
 
   useEffect(() => {
     Promise.all([
@@ -27,7 +37,22 @@ const Profile: React.FC = () => {
       // repositorios
       fetch(`https://api.github.com/users/${username}/repos`),
     ]).then(async (responses) => {
-      console.log(await responses[0].json(), await responses[1].json());
+      // Armazenando as responses (array) um em cada variavel
+      const [userResponse, reposResponse] = responses;
+
+      if (userResponse.status === 404) {
+        setData({ error: 'User not found!' });
+        return;
+      }
+
+      // transformando dados recebidos em json
+      const user = await userResponse.json();
+      const repos = await reposResponse.json();
+
+      setData({
+        user: user,
+        repos: repos,
+      });
     });
   }, [username]);
 

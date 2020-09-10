@@ -1,3 +1,5 @@
+// Criando tipos de dados a serem usadosna aplicação
+
 export interface APIUser {
   login: string;
   name: string;
