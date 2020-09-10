@@ -10,7 +10,7 @@ export interface APIUser {
   blog?: string;
   company?: string;
   email?: string;
-  locationw: string;
+  location: string;
 }
 
 export interface APIRepo {
