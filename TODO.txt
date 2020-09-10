@@ -1,0 +1,4 @@
+TODO
+
+- Usar SWR na aplicação para consumir os dados
+- Usar a GraphQL API do GitHub para capturar mais dados, como forks, stars, entre outros (Sugestão: Apollo)
