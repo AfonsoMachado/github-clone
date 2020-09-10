@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   Container,
   Breadcrumb,
   RepoIcon,
-  Link,
   Stats,
   StarIcon,
   ForkIcon,
