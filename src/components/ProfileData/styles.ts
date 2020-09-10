@@ -50,6 +50,7 @@ export const Avatar = styled.img`
   /* ajuste no avatar para desktop */
   @media (min-width: 768px) {
     width: 100%;
+    margin-top: -34px;
   }
 `;
 
