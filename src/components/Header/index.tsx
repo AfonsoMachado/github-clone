@@ -2,8 +2,15 @@ import React, { useState } from 'react';
 
 import { Container, GithubLogo, SearchForm } from './styles';
 import { useNavigate } from 'react-router-dom';
+import { ThemeName } from '../../styles/themes';
 
-const Header: React.FC = () => {
+interface Props {
+  themeName: ThemeName;
+  // a função recebe o novo nome e retorna void
+  setThemeName: (newName: ThemeName) => void;
+}
+
+const Header: React.FC<Props> = ({ themeName, setThemeName }) => {
   const [search, setSearch] = useState('');
   // para navegar o usuario até a pagina correta
   const navigate = useNavigate();
@@ -14,9 +21,14 @@ const Header: React.FC = () => {
     navigate('/' + search.toLowerCase().trim());
   }
 
+  // Ativada quando alguem clica na logo
+  function toggleTheme() {
+    setThemeName(themeName === 'light' ? 'dark' : 'light');
+  }
+
   return (
     <Container>
-      <GithubLogo />
+      <GithubLogo onClick={toggleTheme} />
       {/* Quando a pessoa der enter  */}
       <SearchForm onSubmit={handleSubmit}>
         <input

@@ -1,6 +1,6 @@
 import 'react-calendar-heatmap/dist/styles.css';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
@@ -11,21 +11,31 @@ import Profile from './pages/Profile';
 import Repo from './pages/Repo';
 import Footer from './components/Footer';
 
+import { ThemeName, themes } from './styles/themes';
+
 function App() {
+  // Sendo light o tema padrão
+  const [themeName, setThemeName] = useState<ThemeName>('light');
+  // tema atual da aplicação
+  const currentTheme = themes[themeName];
+
   return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        {/* Rotas da aplicação */}
-        <Route path="/" element={<Profile />} />
-        <Route path="/:username" element={<Profile />} />
-        <Route path="/:username/:reponame" element={<Repo />} />
-      </Routes>
+    // provê o tema para todos os itens internos
+    <ThemeProvider theme={currentTheme}>
+      <BrowserRouter>
+        <Header themeName={themeName} setThemeName={setThemeName} />
+        <Routes>
+          {/* Rotas da aplicação */}
+          <Route path="/" element={<Profile />} />
+          <Route path="/:username" element={<Profile />} />
+          <Route path="/:username/:reponame" element={<Repo />} />
+        </Routes>
 
-      <Footer />
+        <Footer />
 
-      <GlobalStyles />
-    </BrowserRouter>
+        <GlobalStyles />
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
