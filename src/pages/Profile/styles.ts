@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { RiBookmarkLine } from 'react-icons/ri';
+import { RiBookMarkLine } from 'react-icons/ri';
 
 export const Container = styled.div`
   --horizontalPadding: 16px;
@@ -67,7 +67,7 @@ export const CalendarHeading = styled.span`
   display: inline-flex;
 `;
 
-export const RepoIcon = styled(RiBookmarkLine)`
+export const RepoIcon = styled(RiBookMarkLine)`
   width: 16px;
   height: 16px;
   margin-right: 4px;

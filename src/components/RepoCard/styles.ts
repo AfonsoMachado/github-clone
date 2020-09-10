@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Topside = styled.div`
   > header {
-    display: block;
+    display: flex;
     align-items: center;
 
     > a {
