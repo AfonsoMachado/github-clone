@@ -50,7 +50,9 @@ const Profile: React.FC = () => {
       const repos = await reposResponse.json();
 
       // Para aparecer somente um numero limitado de repositorios na tela
+      // "bagunça" os repositorios, tirando da ordem
       const shuffledRepos = repos.sort(() => 0.5 - Math.random());
+      // lista com somente os 6 primeiros repositorios sorteados
       const slicedRepos = shuffledRepos.slice(0, 6);
 
       setData({
