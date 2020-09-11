@@ -83,6 +83,39 @@ export const Botside = styled.div`
     &.typescript {
       background: var(--typescript);
     }
+    &.css {
+      background: var(--css);
+    }
+    &.html {
+      background: var(--html);
+    }
+    &.vue {
+      background: var(--vue);
+    }
+    &.java {
+      background: var(--java);
+    }
+    &.tex {
+      background: var(--tex);
+    }
+    &.python {
+      background: var(--python);
+    }
+    &.vimscript {
+      background: var(--vimscript);
+    }
+    &.shell {
+      background: var(--shell);
+    }
+    &.ruby {
+      background: var(--ruby);
+    }
+    &.php {
+      background: var(--php);
+    }
+    &.lua {
+      background: var(--lua);
+    }
   }
 `;
 

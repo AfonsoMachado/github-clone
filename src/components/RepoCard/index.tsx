@@ -27,11 +27,33 @@ const RepoCard: React.FC<Props> = ({
   stars,
   forks,
 }) => {
-  // verificando a existencia de uma linguagem registrada
-  const languageClass =
-    language === 'JavaScript' || language === 'TypeScript'
-      ? language.toLowerCase()
-      : 'other';
+  // Lista de possiveis lingaugens utilizadas
+  const languages = [
+    'JavaScript',
+    'TypeScript',
+    'CSS',
+    'HTML',
+    'Vue',
+    'Java',
+    'TeX',
+    'Python',
+    'Vim script',
+    'Shell',
+    'Ruby',
+    'C',
+    'PHP',
+    'Lua',
+  ];
+
+  // verificando a existencia de uma linguagem registrada, se não exister, é usada a cor genérica
+  let languageClass = languages.find((el) => el === language)
+    ? language?.toLowerCase().replace(' ', '')
+    : 'other';
+
+  if (language === null) {
+    languageClass = 'other';
+    language = 'Text';
+  }
 
   return (
     <Container>
