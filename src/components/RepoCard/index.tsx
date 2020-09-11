@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// Lista de possiveis lingaugens utilizadas
+import { languages } from '../../data/languages';
 
 import {
   Container,
@@ -27,24 +29,6 @@ const RepoCard: React.FC<Props> = ({
   stars,
   forks,
 }) => {
-  // Lista de possiveis lingaugens utilizadas
-  const languages = [
-    'JavaScript',
-    'TypeScript',
-    'CSS',
-    'HTML',
-    'Vue',
-    'Java',
-    'TeX',
-    'Python',
-    'Vim script',
-    'Shell',
-    'Ruby',
-    'C',
-    'PHP',
-    'Lua',
-  ];
-
   // verificando a existencia de uma linguagem registrada, se não exister, é usada a cor genérica
   let languageClass = languages.find((el) => el === language)
     ? language?.toLowerCase().replace(' ', '')
