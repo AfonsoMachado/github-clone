@@ -1,4 +1,4 @@
-# UI Clone: Dropbox
+# UI Clone: GitHub
 
 <p align="center">:rocket: Clone da interface gráfica da página de perfil do GitHub, implementado em React.
   A partir de uma busca da api do GitHub, é possível consultar o perfil de qualquer usuário, visulizando suas informações e alguns repositórios.
