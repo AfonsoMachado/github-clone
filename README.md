@@ -39,8 +39,8 @@ $ yarn start
 
 ## :white_check_mark: Resultado
 
-![](https://github.com/AfonsoMachado/github-clone/blob/master/result.jpg)
-![](https://github.com/AfonsoMachado/github-clone/blob/master/result2.jpg)
+![](https://github.com/AfonsoMachado/github-clone/blob/master/.github/result.jpg)
+![](https://github.com/AfonsoMachado/github-clone/blob/master/.github/result2.jpg)
 
 ---
 
