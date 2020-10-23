@@ -20,7 +20,6 @@ function App() {
   const currentTheme = themes[themeName];
 
   return (
-    // provê o tema para todos os itens internos
     <ThemeProvider theme={currentTheme}>
       <BrowserRouter>
         <Header themeName={themeName} setThemeName={setThemeName} />
